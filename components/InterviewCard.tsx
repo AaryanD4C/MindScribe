@@ -30,7 +30,7 @@ const InterviewCard = async ({
     {
       Behavioral: "bg-light-400",
       Mixed: "bg-light-600",
-      Technical: "bg-light-800",
+      Relationship: "bg-light-800",
     }[normalizedType] || "bg-light-600";
 
   const formattedDate = dayjs(
@@ -61,7 +61,7 @@ const InterviewCard = async ({
           />
 
           {/* Interview Role */}
-          <h3 className="mt-5 capitalize">{role} Interview</h3>
+          <h3 className="mt-5 capitalize">{role} Therapy</h3>
 
           {/* Date & Score */}
           <div className="flex flex-row gap-5 mt-3">
@@ -84,7 +84,7 @@ const InterviewCard = async ({
           {/* Feedback or Placeholder Text */}
           <p className="line-clamp-2 mt-5">
             {feedback?.finalAssessment ||
-              "You haven't taken this interview yet. Take it now to improve your skills."}
+              "You haven't taken this therapy yet. Take it now to improve your mood."}
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const InterviewCard = async ({
                   : `/interview/${interviewId}`
               }
             >
-              {feedback ? "Check Feedback" : "View Interview"}
+              {feedback ? "Check Feedback" : "View Therapy"}
             </Link>
           </Button>
         </div>
